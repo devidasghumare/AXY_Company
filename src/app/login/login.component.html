@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="login-content">
+      <mat-toolbar class="login-toolbar" color="primary">AXY</mat-toolbar>
+      <mat-card>
+        <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit(loginForm.value)">
+          <mat-form-field>
+            <mat-icon matPrefix>person_outline</mat-icon>
+            <input autofocus type="text" matInput placeholder="Enter Firstname" formControlName="firstname">
+            <small *ngIf="loginForm.get('firstname').errors?.required &&(loginForm.get('firstname').touched || loginForm.get('firstname').dirty)" class="text-danger">Name is required</small>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <input type="text" autocomplete="false" matInput placeholder="Enter Email" formControlName="email">
+            <small class="text-danger" *ngIf="loginForm.get('email').errors?.required && (loginForm.get('email').touched || loginForm.get('email').dirty)">Email is required</small>
+            <small class="text-danger" *ngIf="loginForm.get('email').errors?.pattern">Email address is invalid</small>
+          </mat-form-field>
+          <span *ngIf="errorLoginMsg">User credentials is not correct, Please check with correct First name and Email.</span>
+          <button type="submit" mat-raised-button color="primary">Login</button>
+        </form>
+      </mat-card>
+    </div>
+  </div>

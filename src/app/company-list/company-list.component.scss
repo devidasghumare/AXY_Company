@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+  }
+  .header {
+    padding: 1px;
+    text-align: center;
+    background: #673ab7;
+    color: white;
+    font-size: 15px;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #673ab7;
+    color: white;
+    text-align: center;
+ }
+.column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: auto; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .logo{
+    width: 14%;
+    height: 44%;
+    float: left;
+    margin-right: 10px;
+  }
+  .box-img{
+    background-color: rgb(155 147 147 / 40%);
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border: 5px solid #fafafa;
+  }
+  .dropdown{
+    position: relative;
+    width: 50%;
+    left: 35%;
+    margin-top: 1%;
+  }
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.thead-dark{
+    background-color: #673ab7;
+    color: white;
+}
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+.cursor{
+    cursor: pointer;
+}
+td{
+  border-bottom: 1px solid #151414;
+  border-right: 1px solid black;
+}
+.btn{
+  background-color: #673ab7;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 15px;
+  cursor: pointer;
+} 
+.exit{
+  float: right;
+    margin-right: 10%;
+}
