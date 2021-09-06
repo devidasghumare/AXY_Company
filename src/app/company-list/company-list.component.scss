@@ -24,7 +24,6 @@
     height: auto; /* Should be removed. Only for demonstration */
   }
   
-  /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
